@@ -21,8 +21,8 @@ namespace clase6
 
         public ClasePersona()
         {
-            this.rut = "";
-            this.nombre = "";
+            this.rut = "defecto";
+            this.nombre = "defecto";
             this.numero = 0;
         }
 

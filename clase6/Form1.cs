@@ -29,9 +29,7 @@ namespace clase6
             string nombre = txtNombre.Text;
             int numero = int.Parse(txtNumero.Text);
 
-            bello.setRut(rut);
-            bello.setNombre(nombre);
-            bello.setNumero(numero);
+            bello = new ClasePersona(rut, nombre, numero);
         }
     }
 }
