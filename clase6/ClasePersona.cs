@@ -32,7 +32,12 @@ namespace clase6
         public string getNombre() { return this.nombre; }
         public void setNombre(string nombre) { this.nombre = nombre; }
 
-        public int getNumero() { return this.numero;}
+        public int getNumero() { return this.numero; }
         public void setNumero(int numero) { this.numero = numero; }
+
+        public void sumaNumero(int numero)
+        {
+            this.numero = this.numero + numero;
+        }
     }
 }

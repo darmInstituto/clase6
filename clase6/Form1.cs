@@ -16,11 +16,14 @@ namespace clase6
         {
             InitializeComponent();
         }
-        ClasePersona bello = new ClasePersona();
+        ClasePersona bello;
         private void button1_Click(object sender, EventArgs e)
-        {          
-            string texto = bello.getRut() + " | " + bello.getNombre() + " | " + bello.getNumero();
-            label1.Text = texto;
+        {
+            if (bello != null)
+            {
+                string texto = bello.getRut() + " | " + bello.getNombre() + " | " + bello.getNumero();
+                label1.Text = texto;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -30,6 +33,16 @@ namespace clase6
             int numero = int.Parse(txtNumero.Text);
 
             bello = new ClasePersona(rut, nombre, numero);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != String.Empty && bello != null)
+            {
+                int numero = int.Parse(textBox1.Text);
+                bello.sumaNumero(numero);
+                button1.PerformClick();
+            }
         }
     }
 }
